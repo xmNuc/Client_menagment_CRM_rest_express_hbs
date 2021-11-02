@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('express-handlebars');
 const { clientRouter } = require('./routers/client');
 const { homeRouter } = require('./routers/home');
+const { db } = require('./utils/db');
 
 const app = express();
 
