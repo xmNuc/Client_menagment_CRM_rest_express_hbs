@@ -2,5 +2,6 @@
   {
     "name": "Testing",
     "mail": "test@test.com"
-  }
+  },
+  { "name": "Test 2", "mail": "xx@yy.zz" }
 ]
