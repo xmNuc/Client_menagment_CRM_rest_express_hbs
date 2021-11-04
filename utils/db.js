@@ -26,6 +26,9 @@ class Db {
   getAll() {
     return this._data;
   }
+  getOne(id) {
+    return this._data.find((oneObj) => oneObj.id === id);
+  }
 
   update(id, newObj) {
     this._data = this._data.map((oneObj) => {
@@ -49,3 +52,7 @@ class Db {
 }
 
 const db = new Db('client.json');
+
+module.exports = {
+  db,
+};
