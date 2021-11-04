@@ -1,0 +1,17 @@
+table {
+  text-align: left;
+}
+
+tr {
+  margin: 1px;
+  background: rgb(207, 206, 206);
+}
+
+thead tr {
+  background: rgb(124, 124, 124);
+}
+
+td,
+th {
+  padding: 4px;
+}
