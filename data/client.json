@@ -1,7 +1,16 @@
 [
   {
-    "name": "Testing",
-    "mail": "test@test.com"
+    "id": "123213",
+    "name": "Testing_1",
+    "mail": "test1@test.com",
+    "notes": "",
+    "nextContactAt": "Tommorow"
   },
-  { "name": "Test 2", "mail": "xx@yy.zz" }
+  {
+    "id": "435345",
+    "name": "Testing_2",
+    "mail": "test2@test.com",
+    "notes": "",
+    "nextContactAt": "Yesterday"
+  }
 ]
