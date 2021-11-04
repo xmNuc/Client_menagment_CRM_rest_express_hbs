@@ -11,13 +11,16 @@ class Db {
     this._data = JSON.parse(await readFile(this.dbFileName, 'utf8'));
     // console.log(this._data);
   }
+  _save() {
+    writeFile(this.dbFileName, JSON.stringify(this._data), 'utf8');
+  }
+
   create(obj) {
     this._data.push({
       id: uuid(),
       ...obj,
     });
-
-    writeFile(this.dbFileName, JSON.stringify(this._data), 'utf8');
+    this._save();
   }
 
   getAll() {
@@ -35,23 +38,13 @@ class Db {
         return oneObj;
       }
     });
-
-    writeFile(this.dbFileName, JSON.stringify(this._data), 'utf8');
+    this._save();
   }
 
   delete(id) {
-    this._data = this._data.filter((oneObj) => {
-      if (oneObj.id === id) {
-        return {
-          ...oneObj,
-          ...newObj,
-        };
-      } else {
-        return oneObj;
-      }
-    });
+    this._data = this._data.filter((oneObj) => oneObj.id !== id);
 
-    writeFile(this.dbFileName, JSON.stringify(this._data), 'utf8');
+    this._save();
   }
 }
 
