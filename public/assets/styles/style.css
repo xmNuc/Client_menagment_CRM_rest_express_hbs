@@ -6,12 +6,14 @@ tr {
   margin: 1px;
   background: rgb(207, 206, 206);
 }
-
+tr:nth-child(2n) {
+  background: rgb(230, 230, 230);
+}
 thead tr {
   background: rgb(124, 124, 124);
 }
 
 td,
 th {
-  padding: 4px;
+  padding: 6px;
 }
