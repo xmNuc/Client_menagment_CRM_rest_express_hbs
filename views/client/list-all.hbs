@@ -28,9 +28,10 @@
         </td>
         <td>
           <a href='/client/{{this.id}}'>Details</a>
-          <form method='delete' action='/client/{{this.id}}'><button
-              type='submit'
-            >Delete</button>
+          <form
+            method='post'
+            action='/client/{{this.id}}?_method=DELETE'
+          ><button type='submit'>Delete</button>
           </form>
         </td>
       </tr>
