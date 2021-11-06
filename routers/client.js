@@ -17,10 +17,10 @@ clientRouter
   .post('/', (req, res) => {
     res.send('post - add');
   })
-  .put('/', (req, res) => {
+  .put('/:id', (req, res) => {
     res.send('put - modify');
   })
-  .delete('/', (req, res) => {
+  .delete('/:id', (req, res) => {
     db.delete(req.params.id);
     res.render('client/deleted');
   });

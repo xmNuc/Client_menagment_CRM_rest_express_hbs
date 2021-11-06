@@ -1,16 +1,1 @@
-[
-  {
-    "id": "123213",
-    "name": "Testing_1",
-    "mail": "test1@test.com",
-    "notes": "",
-    "nextContactAt": "Tommorow"
-  },
-  {
-    "id": "435345",
-    "name": "Testing_2",
-    "mail": "test2@test.com",
-    "notes": "a",
-    "nextContactAt": "Yesterday"
-  }
-]
+[{"id":"435345","name":"Testing_2","mail":"test2@test.com","notes":"a","nextContactAt":"Yesterday"}]
