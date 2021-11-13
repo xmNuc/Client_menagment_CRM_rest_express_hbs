@@ -4,6 +4,8 @@ App is using:
 Express 
 Node.js
 Handlebars
+Method-override
+Uuid
 rest Api
 
 Jakub D
