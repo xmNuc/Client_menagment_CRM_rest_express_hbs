@@ -8,5 +8,7 @@ Method-override
 Uuid
 rest Api
 
+data/client.json - client database in json.
+
 More info soon
 Jakub D
