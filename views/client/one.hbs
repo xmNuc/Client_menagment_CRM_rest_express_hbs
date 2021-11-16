@@ -36,4 +36,11 @@
       </tr>{{/if}}
   </tbody>
 </table>
-{{>go-to-clients}}
+
+<form method="GET" action="/client/form/edit/{{client.id}}">
+  <p>
+    <button type="submit">Edit client</button>
+  </p>
+</form>
+
+<p>{{>go-to-clients}}</p>

@@ -23,7 +23,7 @@ clientRouter
     });
   })
   .put('/:id', (req, res) => {
-    res.send('put - modify');
+    res.send('modify Client');
   })
   .delete('/:id', (req, res) => {
     db.delete(req.params.id);
@@ -31,6 +31,11 @@ clientRouter
   })
   .get('/form/add', (req, res) => {
     res.render('client/forms/add');
+  })
+  .get('/form/edit/:id', (req, res) => {
+    res.render('client/forms/edit', {
+      client: db.getOne(req.params.id),
+    });
   });
 
 module.exports = {
