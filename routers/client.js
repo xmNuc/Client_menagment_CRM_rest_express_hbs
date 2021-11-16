@@ -10,14 +10,18 @@ clientRouter
     });
   })
   .get('/:id', (req, res) => {
+    const client = db.getOne(req.params.id);
+    if (!client) {
+      return;
+    }
     res.render('client/one', {
-      client: db.getOne(req.params.id),
+      client,
     });
   })
   .post('/', (req, res) => {
     // console.log(req.body);
     const id = db.create(req.body);
-    res.render('client/added', {
+    res.status(201).render('client/added', {
       name: req.body.name,
       id,
     });
