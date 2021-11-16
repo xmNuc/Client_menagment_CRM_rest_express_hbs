@@ -16,11 +16,11 @@ clientRouter
   })
   .post('/', (req, res) => {
     // console.log(req.body);
-    db.create(req.body);
-    res.render('client/added'),
-      {
-        name: req.body.name,
-      };
+    const id = db.create(req.body);
+    res.render('client/added', {
+      name: req.body.name,
+      id,
+    });
   })
   .put('/:id', (req, res) => {
     res.send('put - modify');
