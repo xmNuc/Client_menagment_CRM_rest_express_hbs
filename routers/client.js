@@ -23,7 +23,11 @@ clientRouter
     });
   })
   .put('/:id', (req, res) => {
-    res.send('modify Client');
+    db.update(req.params.id, req.body);
+    res.render('client/modified', {
+      name: req.body.name,
+      id: req.params.id,
+    });
   })
   .delete('/:id', (req, res) => {
     db.delete(req.params.id);

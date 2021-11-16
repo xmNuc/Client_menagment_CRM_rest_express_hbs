@@ -1,34 +1,34 @@
 <h2>You are editing client: {{client.name}} (id: {{client.id}})</h2>
 
-<form method='PUT' action='/client/{{client.id}}?_method=PUT'>
+<form method='POST' action='/client/{{client.id}}?_method=PUT'>
   <p>
     <label>
       <p>
         E-mail:
       </p>
       <p>
-        <input type='email' name='mail' /></p>
+        <input type='email' name='mail' value="{{client.mail}}"/></p>
     </label>
     <label>
       <p>
         Name:
       </p>
       <p>
-        <input type='text' name='name' /></p>
+        <input type='text' name='name' value="{{client.name}}"/></p>
     </label>
     <label>
       <p>
         Date next contact:
       </p>
       <p>
-        <input type='date' name='nextContactAt' /></p>
+        <input type='date' name='nextContactAt' value="{{client.nextContactAt}}"/></p>
     </label>
     <label>
       <p>
         Notes:
       </p>
       <p>
-        <textarea name='notes'></textarea>
+        <textarea name='notes'>{{client.notes}}</textarea>
       </p>
     </label>
 
