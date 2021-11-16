@@ -1,6 +1,15 @@
 class ValidationError extends Error {}
+class NotFoundError extends Error {}
 
 function handleError(err, req, res, next) {
+  if (err instanceof NotFoundError) {
+    res.status(404);
+    res.render('error', {
+      message: 'ID not found. Cheack client ID and try again',
+    });
+    return;
+  }
+
   console.error(err);
 
   res.status(err instanceof ValidationError ? 400 : 500);
@@ -16,4 +25,5 @@ function handleError(err, req, res, next) {
 module.exports = {
   handleError,
   ValidationError,
+  NotFoundError,
 };
